@@ -28,22 +28,22 @@ void print_list(Node* current_node) {
 
 /**
  * I've never reversed a linked list before,
- *	this is me working stuff out manually.
- *	-------------------------
- *	head = 0x1
- *	0x1      0x2      0x3      0x4
- *	[a, 0x2] [b, 0x3] [c, 0x4] [d, nul]
+ * this is me working stuff out manually.
+ * -------------------------
+ * head = 0x1
+ * 0x1      0x2      0x3      0x4
+ * [a, 0x2] [b, 0x3] [c, 0x4] [d, nul]
  *
- *	head = 0x4
- *	0x1      0x2      0x3      0x4
- *	[a, nul] [b, 0x1] [c, 0x2] [d, 0x3]
+ * head = 0x4
+ * 0x1      0x2      0x3      0x4
+ * [a, nul] [b, 0x1] [c, 0x2] [d, 0x3]
  *	
- *	stored_prev:  0x4
- *	current_node: nul
- *	stored_next:  nul
- *	head = 0x1
- *	0x1        0x2        0x3        0x4
- *	[  8, nul] [  4, 0x1] [-14, 0x2] [ 53, 0x3]
+ * stored_prev:  0x4
+ * current_node: nul
+ * stored_next:  nul
+ * head = 0x1
+ * 0x1        0x2        0x3        0x4
+ * [  8, nul] [  4, 0x1] [-14, 0x2] [ 53, 0x3]
  */
 
 Node* reverse_list_iteratively(Node* head_node) {
@@ -80,7 +80,7 @@ Node* reverse_list_iteratively(Node* head_node) {
  *
  * stack:
  * [ current: 0x1 current.next: 0x2 ]
- * 	 [ current: 0x2 current.next: 0x3 ]
+ *   [ current: 0x2 current.next: 0x3 ]
  *     [ current: 0x3 current.next: 0x4 ]
  *       [ current: 0x4 current.next: nul] -> 0x4
  *     [set (0x3.next)[0x4].next to 0x3, set 0x3.next to nul] -> 0x4
